@@ -13,8 +13,8 @@ app.use(express.static(diretorioPublico));
 
 const servidorHttp = http.createServer(app);
 
-servidorHttp.listen(3000, () =>
-    console.log('Servidor escutando na porta 3000')
+servidorHttp.listen(8095, () =>
+    console.log('Servidor escutando na porta 8095')
 );
 
 const io = new Server(servidorHttp);

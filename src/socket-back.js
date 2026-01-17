@@ -6,5 +6,6 @@ io.on("connection", (socket) => {
     
     socket.on('texto-editor', (texto) => {
         console.log(texto);
+        socket.broadcast.emit("text-client", texto);
     });
 }); 
