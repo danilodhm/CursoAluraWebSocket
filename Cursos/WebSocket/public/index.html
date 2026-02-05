@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHATBOT</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div id="chat-container">
+        <header id="chat-header">
+            <span class="logo">CHATBOT</span>
+            <span class="status online">● Online</span>
+        </header>
+
+
+        <!-- Canais -->
+        <div id="channels">
+            <button class="channel-button" id="canalgeral" data-channel="general"># Geral</button>
+            <button class="channel-button" id="canaltech" data-channel="tech"># Tech</button>
+            <button class="channel-button" id="canalrandom" data-channel="random"># Random</button>
+        </div>
+
+
+        <!-- Histórico -->
+        <div id="chat-history">
+            <div class="message">
+                <div class="message-header">
+                    <span class="username">System</span>
+                    <span class="time" id="timebot">00:00</span>
+                </div>
+                <div class="message-body">
+                    Bem vindo ao CHATBOT 😎
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Input -->
+        <div id="input-area">
+            <textarea id="large-textarea" placeholder="Digite sua mensagem..." rows="2"></textarea>
+            <button id="send-button">➤</button>
+        </div>
+    </div>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="index.js" type="module"></script>
+</body>
+
+</html>
